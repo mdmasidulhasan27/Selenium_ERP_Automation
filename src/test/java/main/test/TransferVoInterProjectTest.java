@@ -50,13 +50,15 @@ public class TransferVoInterProjectTest extends LoginToErp {
         webDriver.findElement(By.xpath("//select [@name='personalInfoDomain.maritalStatusId']")).click();
         webDriver.findElement(By.xpath("// option [contains(text(),'Single')]")).click();
 
+        webDriver.findElement(By.xpath("//input [@name='personalInfoDomain.dateOfBirth']")).click();
         webDriver.findElement(By.xpath("//input [@name='personalInfoDomain.dateOfBirth']")).sendKeys("01-01-1998");
         webDriver.findElement(By.xpath("// div [@class='element-title'] [contains(text(),'Date of Birth')]")).click();
-        Thread.sleep(10000);
+        Thread.sleep(1000);
 
         webDriver.findElement(By.xpath("//select [@name='personalInfoDomain.occupationId']")).click();
         webDriver.findElement(By.xpath("// option [contains(text(),'Others')]")).click();
         Thread.sleep(1000);
+
         webDriver.findElement(By.xpath("//input [@name='personalInfoDomain.fatherName' and @id='memberFatherName']")).sendKeys("Father Name");
         webDriver.findElement(By.xpath("//input [@name='personalInfoDomain.motherName' and @id='memberMotherName']")).sendKeys("Mother Name");
         webDriver.findElement(By.xpath("//input [@name='contactInfoDomain.contactNo' and @id='contactNo']")).sendKeys(RandomDatas.getMobileNo());
