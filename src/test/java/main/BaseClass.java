@@ -5,7 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseClass {
-    protected static final String officeCode="394";
+    //protected static final String officeCode="394";
+    protected static final String officeCode="378";
+    protected static final String voCode="2015";
     protected static final String userName = "00026728";
     protected static final String userPassword = "abc123$";
     protected static final String url = "https://erpstaging.brac.net";
