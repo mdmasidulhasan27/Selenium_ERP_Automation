@@ -13,7 +13,7 @@ public class PostgresqlJdbcConnection {
     //private static String dbUrl = "jdbc:postgresql://10.42.53.111:4560/sbicloud_bd"; //8099
 
 
-    public static Connection getPostgresqlConnection() {
+    public static Connection getPostgreSqlConnection() {
         Connection connection = null;
         try {
             Class.forName("org.postgresql.Driver");
@@ -32,7 +32,7 @@ public class PostgresqlJdbcConnection {
     public static void main(String[] args) {
         Statement stmt = null;
         try {
-            stmt = getPostgresqlConnection().createStatement();
+            stmt = getPostgreSqlConnection().createStatement();
             ResultSet rs = stmt.executeQuery("select id from member_info where branch_info_id=43 and project_info_id=2 and domain_status_id=1 and member_status_id=1 order by id desc limit 10 offset 0;");
             //ResultSet rs = stmt.executeQuery("select id from office_info order by id desc limit 20");
 
@@ -45,7 +45,7 @@ public class PostgresqlJdbcConnection {
             }
             rs.close();
             stmt.close();
-            getPostgresqlConnection().close();
+            getPostgreSqlConnection().close();
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);
@@ -57,9 +57,9 @@ public class PostgresqlJdbcConnection {
         Statement stmt = null;
         ResultSet rs = null;
         try {
-            stmt = getPostgresqlConnection().createStatement();
+            stmt = getPostgreSqlConnection().createStatement();
             rs = stmt.executeQuery(sqlQuery);
-            getPostgresqlConnection().close();
+            getPostgreSqlConnection().close();
         } catch (Exception e) {
             System.err.println(e.getClass().getName() + ": " + e.getMessage());
             System.exit(0);

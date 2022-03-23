@@ -11,7 +11,7 @@ public class BaseClass {
     protected static final String userName = "00026728";
     protected static final String userPassword = "abc123$";
     protected static final String url = "https://erpstaging.brac.net";
-    protected static final String chromeDriverPath = "E:\\chromedriver_win32\\chromedriver.exe";
+    protected static final String chromeDriverPath = "E:\\chromedriver.exe";
 
     protected static WebDriver openBrowser() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", chromeDriverPath);

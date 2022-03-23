@@ -1,6 +1,5 @@
-package main.test;
+package main.test.member;
 
-import main.LoginToErp;
 import main.RandomDatas;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,9 +7,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import javax.annotation.concurrent.ThreadSafe;
+import static main.LoginToErp.login;
 
-public class TransferVoInterProjectTest extends LoginToErp {
+public class NewMember{
     String voCode = "5094";
     WebDriver webDriver;
     @BeforeMethod

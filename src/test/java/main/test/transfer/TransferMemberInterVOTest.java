@@ -1,4 +1,4 @@
-package main.test;
+package main.test.transfer;
 
 import main.BaseClass;
 import main.LoginToErp;
